@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ReadmeComponent } from './components/readme/readme.component';
+import { SearchComponent } from './components/search/search.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'readme', component: ReadmeComponent },
+  { path: 'search', component: SearchComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+$primary-ultra-light:#EAEDE8;
+$primary-light:#E2E8E0;
+$primary:#D3DCD0;
+$primary-dark:#BDCCB7;
+$secondary:#6C8F93;
+
+.bg-primary-light{
+    background-color:$primary-light !important ;
+}
+
+.bg-primary-ultra-light{
+    background-color:$primary-ultra-light !important ;
+}
+
+.btn-primary-dark{
+    background-color:$primary-dark !important ;  
+    color:black
+}
+
+.text-secondary{
+    color:$secondary !important
+}
