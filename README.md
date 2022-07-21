@@ -19,12 +19,17 @@ Write a flight search that matches the following specification:
 ### Example 1
 
 **Cities:** London, Rome, Berlin
+
 **Connections:** London -> Rome, Rome -> Berlin
+
 **Expected search results for London -> Berlin:** London -> Rome -> Berlin
 
 ### Example 2
 
 **Cities:** London, Rome, Vienna, Berlin
+
 **Connections:** London -> Rome, Rome -> Berlin, London -> Berlin, Berlin -> London, London -> Vienna
+
 **Expected search results for London -> Berlin:** London -> Rome -> Berlin, London -> Berlin
+
 **Expected search resutls for London -> Vienna:** London -> Vienna
