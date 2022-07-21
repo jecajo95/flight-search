@@ -1,27 +1,30 @@
-# RoutePlanner
+# Live showcase
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+You can see a live version of this application here: [https://angular-ivy-qplmet.stackblitz.io](https://angular-ivy-qplmet.stackblitz.io).
 
-## Development server
+The editor view of the live version can be accessed here: [https://stackblitz.com/edit/angular-ivy-qplmet?file=src/app/app.component.ts](https://stackblitz.com/edit/angular-ivy-qplmet?file=src/app/app.component.ts).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Assignment
 
-## Code scaffolding
+I've been given the following assignment by an experienced frontend developer in order to build a showcase for my skills.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Assignment details
 
-## Build
+Write a flight search that matches the following specification:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- One should be able to add and delete cities
+- One should be able to add and delete a connection between two cities
+- One should be able to search for all flights that exist between two cities (including stopovers in other cities)
 
-## Running unit tests
+### Example 1
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Cities:** London, Rome, Berlin
+**Connections:** London -> Rome, Rome -> Berlin
+**Expected search results for London -> Berlin:** London -> Rome -> Berlin
 
-## Running end-to-end tests
+### Example 2
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Cities:** London, Rome, Vienna, Berlin
+**Connections:** London -> Rome, Rome -> Berlin, London -> Berlin, Berlin -> London, London -> Vienna
+**Expected search results for London -> Berlin:** London -> Rome -> Berlin, London -> Berlin
+**Expected search resutls for London -> Vienna:** London -> Vienna
