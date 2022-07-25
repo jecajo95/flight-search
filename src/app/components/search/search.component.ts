@@ -8,7 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class SearchComponent implements OnInit {
   checkedDestinations: string[] = [];
-  cities: string[] = ['Rome', 'Berlin', 'Vienna', 'Linz'];
+  cities: string[] = ['Rome', 'Berlin', 'Vienna', 'Linz', 'Istanbul'];
   connections: any = {
     Berlin: ['Linz'],
     Istanbul: ['Berlin'],
@@ -85,27 +85,17 @@ export class SearchComponent implements OnInit {
       for (let otherConnection of otherConnections) {
         if (this.checkedDestinations.indexOf(connection) === -1) {
           this.checkedDestinations.push(connection);
-        }
+          if (otherConnection === finalDestination) {
+            const checkedDestinationsCopy = JSON.parse(
+              JSON.stringify(this.checkedDestinations)
+            );
+            checkedDestinationsCopy.unshift(startDestination);
+            checkedDestinationsCopy.push(finalDestination);
 
-        if (otherConnection === finalDestination) {
-          const checkedDestinationsCopy = JSON.parse(
-            JSON.stringify(this.checkedDestinations)
-          );
-          checkedDestinationsCopy.unshift(startDestination);
-          checkedDestinationsCopy.push(finalDestination);
-
-          this.connectionResults.push(checkedDestinationsCopy);
-        }
-
-        if (
-          this.checkedDestinations.length + 1 ===
-          Object.keys(this.connections).length
-        ) {
-          break;
-        }
-
-        if (otherConnection !== finalDestination) {
-          this.checkOtherConnections(otherConnection);
+            this.connectionResults.push(checkedDestinationsCopy);
+          } else {
+            this.checkOtherConnections(otherConnection);
+          }
         }
       }
     }
@@ -136,16 +126,19 @@ export class SearchComponent implements OnInit {
   }
 
   searchConnections() {
+    this.checkedDestinations = [];
     this.connectionResults = [];
     const startDestination = this.connectionsForm.value.startDestination;
     const finalDestination = this.connectionsForm.value.finalDestination;
     const directConnections = this.connections[startDestination];
 
-    for (let connection of directConnections) {
-      if (connection === finalDestination) {
-        this.connectionResults.push([startDestination, finalDestination]);
-      } else {
-        this.checkOtherConnections(connection);
+    if (directConnections) {
+      for (let connection of directConnections) {
+        if (connection === finalDestination) {
+          this.connectionResults.push([startDestination, finalDestination]);
+        } else {
+          this.checkOtherConnections(connection);
+        }
       }
     }
   }
