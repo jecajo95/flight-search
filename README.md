@@ -1,8 +1,8 @@
 # Live showcase
 
-You can see a live version of this application here: [https://github-2ldush.stackblitz.io/readme](https://github-2ldush.stackblitz.io/readme).
+You can see a live version of this application here: [https://github-2ldush.stackblitz.io](https://github-2ldush.stackblitz.io).
 
-The editor view of the live version can be accessed here: [https://stackblitz.com/edit/github-2ldush?file=package.json,src%2Fapp%2Fcomponents%2Fsearch%2Fsearch.component.ts](https://stackblitz.com/edit/github-2ldush?file=package.json,src%2Fapp%2Fcomponents%2Fsearch%2Fsearch.component.ts).
+The editor view of the live version can be accessed here: [https://stackblitz.com/edit/github-2ldush](https://stackblitz.com/edit/github-2ldush).
 
 # Assignment
 
