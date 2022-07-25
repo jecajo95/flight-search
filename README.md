@@ -1,8 +1,8 @@
 # Live showcase
 
-You can see a live version of this application here: [https://angular-ivy-lpzsob.stackblitz.io](https://angular-ivy-lpzsob.stackblitz.io).
+You can see a live version of this application here: [https://github-2ldush.stackblitz.io/readme](https://github-2ldush.stackblitz.io/readme).
 
-The editor view of the live version can be accessed here: [https://stackblitz.com/edit/angular-ivy-lpzsob?file=src/app/app.component.ts](https://stackblitz.com/edit/angular-ivy-lpzsob?file=src/app/app.component.ts).
+The editor view of the live version can be accessed here: [https://stackblitz.com/edit/github-2ldush?file=package.json,src%2Fapp%2Fcomponents%2Fsearch%2Fsearch.component.ts](https://stackblitz.com/edit/github-2ldush?file=package.json,src%2Fapp%2Fcomponents%2Fsearch%2Fsearch.component.ts).
 
 # Assignment
 
